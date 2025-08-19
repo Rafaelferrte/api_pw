@@ -1,4 +1,6 @@
 import os
+from dotenv import load_dotenv
 
-# Configure a chave da Groq aqui ou use variável de ambiente
-GROQ_API_KEY = os.getenv("GROQ_API_KEY", "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")
+load_dotenv()  # carrega variáveis do .env
+
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
