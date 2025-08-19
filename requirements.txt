@@ -1,3 +1,6 @@
 # Execute esse comando pip install -r requirements.txt
-flask
-openai
+# A Api utilizada é a https://groq.com/
+Flask
+groq
+python-dotenv
+
