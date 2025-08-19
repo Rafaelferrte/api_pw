@@ -1,0 +1,3 @@
+# Execute esse comando pip install -r requirements.txt
+flask
+openai

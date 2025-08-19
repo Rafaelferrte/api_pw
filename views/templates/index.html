@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat com Groq (LLaMA 3)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white min-h-screen flex items-center justify-center">
+
+  <div class="w-full max-w-2xl p-6 bg-gray-900/70 backdrop-blur-lg rounded-2xl shadow-lg border border-gray-700">
+    
+    <h1 class="text-3xl font-bold text-center mb-6 text-indigo-400">🤖 Chat com IA</h1>
+
+    <form method="POST" class="flex flex-col gap-4">
+      <textarea 
+        name="user_input" 
+        placeholder="Digite sua pergunta..." 
+        class="w-full p-4 rounded-lg bg-gray-800 text-white border border-gray-600 focus:ring-2 focus:ring-indigo-500 focus:outline-none resize-none"
+        rows="4"
+        required
+      ></textarea>
+      <button 
+        type="submit" 
+        class="w-full py-3 rounded-lg bg-indigo-500 hover:bg-indigo-600 transition font-semibold text-white shadow-lg">
+        Enviar
+      </button>
+    </form>
+
+    {% if response %}
+    <div class="mt-6 p-4 rounded-lg bg-gray-800 border border-gray-600 shadow-inner">
+      <h2 class="text-lg font-semibold text-indigo-400 mb-2">Resposta da IA:</h2>
+      <p class="text-gray-200 leading-relaxed whitespace-pre-line">{{ response }}</p>
+    </div>
+    {% endif %}
+
+  </div>
+
+</body>
+</html>
