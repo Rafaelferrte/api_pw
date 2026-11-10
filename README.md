@@ -1,36 +1,84 @@
-# api_pw
+# Chat com IA — Flask e Groq
 
-# ChatGPT Flask com Groq
+Projeto acadêmico que integra uma aplicação web desenvolvida com Flask à API da Groq para experimentar a comunicação com modelos de inteligência artificial.
 
-Este é um projeto simples usando **Flask** e a **API da Groq** para integrar uma IA em um site.
+## Tecnologias
 
-## 🚀 Como rodar
+- Python
+- Flask
+- Groq API
+- python-dotenv
+- HTML e CSS
 
-1. Clone o repositório, crie um ambiente virtual, instale as dependências, configure a chave da Groq e rode o projeto:
+## Estrutura
+
+```text
+.
+├── app/
+│   ├── controllers/
+│   ├── models/
+│   ├── templates/
+│   ├── __init__.py
+│   └── routes.py
+├── config.py
+├── requirements.txt
+└── run.py
+```
+
+## Pré-requisitos
+
+- Python instalado.
+- Uma chave de API da Groq, disponível no site oficial da [Groq](https://groq.com/).
+
+## Como executar
+
+Clone o repositório:
 
 ```bash
 git clone https://github.com/Rafaelferrte/api_pw.git
 cd api_pw
+```
+
+Crie e ative um ambiente virtual:
+
+```bash
 python -m venv venv
-source venv/bin/activate   # no Windows use: venv\Scripts\activate
+```
+
+Linux/macOS:
+
+```bash
+source venv/bin/activate
+```
+
+Windows:
+
+```powershell
+venv\Scripts\activate
+```
+
+Instale as dependências:
+
+```bash
 pip install -r requirements.txt
-echo "GROQ_API_KEY=sua_chave_aqui" > .env
+```
+
+Crie um arquivo `.env` na raiz do projeto e adicione sua chave:
+
+```env
+GROQ_API_KEY=sua_chave_aqui
+```
+
+Inicie a aplicação:
+
+```bash
 python run.py
+```
 
-📂 Estrutura do projeto
+## Segurança
 
-app/
- ├── controllers/
- ├── models/
- ├── templates/
- ├── __init__.py
- └── routes.py
-run.py
-requirements.txt
-config.py
+Não compartilhe sua chave de API nem envie o arquivo `.env` para o GitHub. Utilize variáveis de ambiente para manter credenciais fora do código-fonte.
 
-🛠️ Tecnologias
+## Objetivo acadêmico
 
-Python + Flask
-Groq API
-HTML + CSS
+Praticar integração entre aplicações Python, frameworks web e serviços de IA por meio de uma API externa.
